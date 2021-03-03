@@ -1,3 +1,4 @@
+'use strict;'
 /*
 Напишите функцию pow(x,n), которая возвращает x в степени n. 
 Иначе говоря, умножает x на себя n раз и возвращает результат.
@@ -6,15 +7,16 @@ P.S. В этой задаче функция обязана поддержива
 значения n, т.е. целые от 1 и выше.
 */
 
-function pow(x,n) {
-    if(n>1 && Number.isInteger(n)==true){
-        return x**n
+function pow(x, n) {
+  if(n>1 && Number.isInteger(n)==true){
+        return x**n;
     }
-        return 'Введите натуральное n больше 1'
+        return 'Введите натуральное n больше 1';
 }
+
 let x = +prompt('Введите x:', '');
 let n = +prompt('Введите n:', '');
-alert(pow(x,n))
+  alert( pow(x,n ));
 
 
 /*
