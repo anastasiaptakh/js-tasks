@@ -58,6 +58,7 @@ alert( isEmpty(schedule) ); // true
 schedule["8:30"] = "get up";
 
 alert( isEmpty(schedule) ); // false
+*/
 
 let schedule = {
   name: 'john',
@@ -68,8 +69,8 @@ function isEmpty(obj){
   }
   return true
 }
-alert(isEmpty(schedule));
-*/
+console.log(isEmpty(schedule));
+
 
 
 /* 4
@@ -95,5 +96,51 @@ let sum = 0;
   for (let key in salaries){
     sum += salaries[key];
   }
-  
-alert(sum);
+
+console.log(sum);
+
+/* 5
+Создайте функцию multiplyNumeric(obj), которая умножает все числовые
+свойства объекта obj на 2.
+
+Например:
+
+// до вызова функции
+let menu = {
+  width: 200,
+  height: 300,
+  title: "My menu"
+};
+
+multiplyNumeric(menu);
+
+// после вызова функции
+menu = {
+  width: 400,
+  height: 600,
+  title: "My menu"
+};
+Обратите внимание, что multiplyNumeric не нужно ничего возвращать.
+Следует напрямую изменять объект.
+
+P.S. Используйте typeof для проверки, что значение свойства числовое.
+*/
+let menu = {
+  width: 200,
+  height: 300,
+  title: "My menu"
+};
+
+
+function multiplyNumeric(obj) {
+  for (let key in obj) {
+  if (typeof obj[key] == 'number') {
+    obj[key] = obj[key] * 2;
+    }
+  }
+}
+multiplyNumeric(menu);
+
+console.log(menu);
+
+
