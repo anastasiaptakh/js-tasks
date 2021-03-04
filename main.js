@@ -5,7 +5,7 @@
 Создайте страницу, которая запрашивает x и n, а затем выводит результат pow(x,n).
 P.S. В этой задаче функция обязана поддерживать только натуральные 
 значения n, т.е. целые от 1 и выше.
-*/
+
 
 function pow(x, n) {
   if(n>1 && Number.isInteger(n)==true){
@@ -17,6 +17,7 @@ function pow(x, n) {
 let x = +prompt('Введите x:', '');
 let n = +prompt('Введите n:', '');
   alert( pow(x,n ));
+*/
 
 
 /*
@@ -33,7 +34,7 @@ ask(
   function() { alert("Вы согласились."); },
   function() { alert("Вы отменили выполнение."); }
 );
-*/
+
 
 let ask = (question, yes, no) => (confirm(question)) ? yes() : no();
 
@@ -42,3 +43,30 @@ ask(
     () => alert("Вы согласились."),
     () => alert("Вы отменили выполнение.")
 )
+*/
+
+/*
+Напишите функцию isEmpty(obj), которая возвращает true,
+если у объекта нет свойств, иначе false.
+
+Должно работать так:
+
+let schedule = {};
+
+alert( isEmpty(schedule) ); // true
+
+schedule["8:30"] = "get up";
+
+alert( isEmpty(schedule) ); // false
+*/
+
+let schedule = {
+  name: 'john',
+};
+function isEmpty(obj){
+  for (let key in obj) {
+    return false
+  }
+  return true
+}
+alert(isEmpty(schedule));
