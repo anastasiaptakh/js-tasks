@@ -143,4 +143,34 @@ multiplyNumeric(menu);
 
 console.log(menu);
 
+/* 6
+Создайте объект calculator (калькулятор) с тремя методами:
 
+read() (читать) запрашивает два значения и сохраняет их как свойства объекта.
+sum() (суммировать) возвращает сумму сохранённых значений.
+mul() (умножить) перемножает сохранённые значения и возвращает результат.
+let calculator = {
+  // ... ваш код ...
+};
+
+calculator.read();
+alert( calculator.sum() );
+alert( calculator.mul() );
+*/
+
+let calculator = {
+  read: function() {
+    //this.a = +prompt('num 1');
+    //this.b = +prompt('num 2');
+  },
+  sum: function() {
+    return this.a + this.b
+  },
+  mul: function() {
+    return this.a * this.b
+  }
+};
+
+console.log(calculator.read())
+console.log(calculator.sum())
+console.log(calculator.mul())
