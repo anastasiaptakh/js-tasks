@@ -216,5 +216,46 @@ let ladder = {
   }
 };
 
-console.log(ladder.up().up().down().showStep()); 
+console.log(ladder.up().up().down().showStep());
 
+
+
+
+let newWord = '';
+function changeWord(word) {
+  for (let i = 0; i < word.length; i++) {
+    if (word[i] === '5') {
+      newWord += 's';
+    } else {
+      newWord += word[i]
+    }
+  }
+  return newWord;
+}
+
+console.log(changeWord('5o5'));
+
+
+
+/*
+Создайте функцию readNumber, которая будет запрашивать ввод 
+числового значения до тех пор, пока посетитель его не введёт.
+
+Функция должна возвращать числовое значение.
+
+Также надо разрешить пользователю остановить процесс ввода, отправив пустую строку 
+или нажав «Отмена». В этом случае функция должна вернуть null.
+*/
+
+
+function readNumber(){
+  let num;
+  do {
+    num = prompt('введите число' , 0)
+  } while (typeof num === 'number')
+
+  if(num === null || num === '') return null;
+  return +num;
+}
+
+console.log(readNumber());
