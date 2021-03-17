@@ -277,4 +277,25 @@ alert( random(1, 5) ); // 4.3435234525
 function random(min, max) {
   return (Math.random() * (max-min) + min) 
 }
-console.log(random(1, 5))
+console.log(random(1, 5));
+
+/*
+Напишите функцию checkSpam(str), возвращающую true, 
+если str содержит 'viagra' или 'XXX', а иначе false.
+
+Функция должна быть нечувствительна к регистру:
+
+checkSpam('buy ViAgRA now') == true
+checkSpam('free xxxxx') == true
+checkSpam("innocent rabbit") == false
+
+*/
+
+function checkSpam(str) {
+  let newStr = str.toLowerCase();
+  return newStr.includes('viagra') || newStr.includes('xxxxx');
+}
+console.log(checkSpam('buy ViAgRA now'));
+console.log(checkSpam('free xxxxx'));
+console.log(checkSpam("innocent rabbit"));
+
